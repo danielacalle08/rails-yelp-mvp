@@ -1,0 +1,19 @@
+<div class="m-3">
+  <h1>Restaurants</h1>
+  <table class="table">
+      <thead>
+        <tr class="table-info">
+          <th>Name</th>
+          <th>Phone Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <% @restaurants.each do |restaurant| %>
+          <td><%= link_to restaurant.name, restaurant_path(restaurant)%></td>
+          <td><%= restaurant.phone_number %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+</div>
