@@ -10,10 +10,11 @@
       <tbody>
         <tr>
         <% @restaurants.each do |restaurant| %>
-          <td><%= link_to restaurant.name, restaurant_path(restaurant)%></td>
+          <td><%= link_to restaurant.name, restaurant_path(restaurant), class: "text-decoration-none"%></td>
           <td><%= restaurant.phone_number %></td>
         </tr>
         <% end %>
       </tbody>
     </table>
+    <%= link_to "Add new restaurant", restaurants_new_path, class: "btn btn-primary" %>
 </div>
